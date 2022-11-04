@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Righteous&display=swap');
+
+body {
+    margin: 0;
+}
+
+.work-panel {
+    display: flex;
+    gap: 10px;
+    font-size: 20px;
+    height: 20em;
+}
+
+video {
+    position: absolute;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+}
+
+.container.active {
+    height: 100vh;
+}
+
+.planet-panel {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    position: absolute;
+    right: 0;
+}
+
+.planet-panel li {
+    font: 1.3em "Alkalami", sans-serif;
+    user-select: none;
+    cursor: pointer;
+    width: 6em;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 0.2em;
+    padding: 0.4em;
+    border: 0.2em solid;
+    background: rgba(224, 224, 217, 0.56);
+    list-style-type: none;
+}
+
+.planet-panel li:hover:not(.active) {
+    background: rgba(182, 182, 151, 0.56);
+}
+
+.planet-panel li.active {
+    background: #a24e4e;
+}
+
+.planet-panel li:active {
+    transform: scale(0.85);
+}
+
+.action-panel {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    display: flex;
+    align-items: end;
+    gap: 1em
+}
+
+.action-panel .block_move {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+    padding-top: 7em;
+}
+
+.action-panel .slider_speed_arround {
+    display: none;
+}
+
+.action-panel svg {
+    fill: rgba(255, 255, 255, 0.59);
+    transform: scale(1.5);
+}
+
+.action-panel svg:hover {
+    fill: rgb(255, 255, 255);
+}
+
+.action-panel svg:active {
+    transform: scale(1.4);
+}
+
+.action-panel svg.active {
+    fill: rgb(201, 58, 58);
+}
+
+#loading {
+    display: none;
+    align-self: center;
+    position: absolute;
+    z-index: 100;
+    fill: rgb(45, 80, 162);
+    animation: move 1.2s infinite linear;
+
+}
+
+@keyframes move {
+    0% {
+        transform: rotate(0deg);
+    }
+    30% {
+        transform: rotate(0deg);
+    }
+    85% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+.has {
+    user-select: none;
+    width: 30em;
+}
+
+.help-panel {
+    position: absolute;
+    left: 0;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    background: rgba(138, 146, 255, 0.47);
+    list-style-type: none;
+}
+
+.help-panel li {
+    display: flex;
+    align-items: center;
+    padding: 0.5em 0.4em;
+    border: 0.2em ridge rgba(138, 146, 255, 0.58);
+}
+
+.help-panel img {
+    width: 3em;
+}
